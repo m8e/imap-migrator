@@ -5,17 +5,25 @@ Docker Imap Migrator
 
 ## TODO ENGLISH
 
-Posizionarsi nella cartella deploy_migrator, copiare il file docker-compose.sample.yml in docker-compose.yml e modificare le variabili d'ambiente per la migrazione della casella (si può creare un container per ogni casella email. Se il container crasha basta riavviare e la migrazione riprende dal punto in cui era)
+Go to the deploy_migrator folder, 
+copy the 
+## docker-compose.sample.yml 
+file to 
+## docker-compose.yml 
+and change the environment variables for mailbox migration 
+
+You can create a container for each mailbox. 
+If the container crashes just restart and the migration resumes where it was.
 
 Uso
 ---
 
-Una volta sistemato il file compose, lanciarlo con
+Once the compose file is fixed, launch it with
 
 ```bash
 docker-compose up
 ```
 
-A fine migrazione, si avrà un messaggio come questo:
+At the end of the migration, you will get a message like this:
 
     Synchronization of 12571 messages finished, took 6:44:35.101650
